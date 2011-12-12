@@ -1,0 +1,1 @@
+http://www.debian.org/doc/packaging-manuals/menu.html/ch3.html

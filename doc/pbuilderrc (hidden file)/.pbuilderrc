@@ -1,0 +1,58 @@
+# кодовые названия дистрибутивов Debian
+UNSTABLE_CODENAME="unstable"
+TESTING_CODENAME="testing"
+STABLE_CODENAME="stable"
+DEBIAN_SUITES=($UNSTABLE_CODENAME $TESTING_CODENAME $STABLE_CODENAME
+    "sid" "wheezy" "squeeze")
+# названия дистрибутивов Ubuntu
+UBUNTU_SUITES=("jaunty" "intrepid" "hardy" "gutsy")
+
+# адреса зеркал с пакетами
+DEBIAN_MIRROR="ftp.ru.debian.org"
+UBUNTU_MIRROR="mirrors.kernel.org"
+
+# выбираем дистрибутив для использования
+: ${DIST:="$(lsb_release --short --codename)"}
+# а также архитектуру
+: ${ARCH:="$(dpkg --print-architecture)"}
+
+# компоненты дистрибутива по умолчанию
+COMPONENTS="main contrib non-free"
+
+# ну и давайте определим имя, которым мы будем обозначать отдельный образ
+NAME="$DIST"
+if [ -n "${ARCH}" ]; then
+    NAME="$NAME-$ARCH"
+    # следующая строчка нужна для того чтобы собирать под разные архитектуры
+    DEBOOTSTRAPOPTS=("--arch" "$ARCH" "${DEBOOTSTRAPOPTS[@]}")
+fi
+
+# где мы будем создавать, а потом искать файл образа
+BASETGZ="/home/joe/pbuilder/$NAME-base.tgz"
+DISTRIBUTION="$DIST"
+# и куда мы будем класть собранные пакеты
+BUILDRESULT="/home/joe/pbuilder/$DIST/result/"
+# тут у нас будет лежать кэш слитых из сети пакетов
+APTCACHE="/home/joe/pbuilder/$NAME/aptcache/"
+# а в это место будет распаковываться образ для сборки
+BUILDPLACE="/home/joe/pbuilder/build/"
+
+# если мы собираем под дебиан, то качать пакеты тута
+if $(echo ${DEBIAN_SUITES[@]} | grep -q $DIST); then
+    MIRRORSITE="http://$DEBIAN_MIRROR/debian/"
+    COMPONENTS="main contrib non-free"
+# а если под убунту, то качать тама
+elif $(echo ${UBUNTU_SUITES[@]} | grep -q $DIST); then
+    MIRRORSITE="http://$UBUNTU_MIRROR/ubuntu/"
+    COMPONENTS="main restricted universe multiverse"
+# а если вообще непонятно под что - то просто идти нафиг
+else
+    echo "Неизвестный дистрибутив: $DIST"
+    exit 1
+fi
+
+# еще можно раскомментировать следующие два параметра по необходимости:
+# примонтировать каталог вашей системы в такой же каталог образа
+#BINDMOUNTS="/var/cache/archive"
+# подключить дополнительное зеркало помимо стандартного
+#OTHERMIRROR="deb file:///var/cache/archive unstable main"

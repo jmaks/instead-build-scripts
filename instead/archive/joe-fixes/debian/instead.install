@@ -1,0 +1,6 @@
+debian/tmp/usr/games
+debian/tmp/usr/share/applications
+debian/tmp/usr/share/doc
+debian/tmp/usr/share/man
+debian/tmp/usr/share/pixmaps
+debian/instead.xpm /usr/share/pixmaps

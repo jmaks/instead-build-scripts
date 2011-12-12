@@ -1,0 +1,74 @@
+My account
+
+Put this in ~/.dput.cf
+
+[debexpo]
+fqdn = mentors.debian.net
+incoming = /upload/joe.skb7@gmail.com/31fed3711bd25a55cc3fc20023fb2798
+method = http
+allow_unsigned_uploads = 0
+
+------------------
+
+Заполнил полностью профиль, в т.ч. залил GPG-ключ. Как экспортировать - написано тут
+http://www.debuntu.org/how-to-import-export-gpg-key-pair
+
+$ gpg --output mygpgkey_pub.gpg --armor --export ABCDFE01
+и указал полученный файл на странице
+
+-------------------
+
+Чтобы получить номер ITP (для включения в changelog)
+reportbug --email joe.skb7@gmail.com wnpp
+тут написано как http://www.debian.org/devel/wnpp/
+
+перед этим надо настроить exim4:
+
+http://debianadmin.ru/otpravka-pochty-cherez-vneshnij-smtp-server-exim4.html
+
+------------
+
+Перед упаковкой и заливкой убедится, что в системе установлено корректное время (timeticker.com)
+
+------------
+
+debuild --lintian-opts
+dput debexpo instead_1.5.1-1_amd64.changes
+
+------------
+
+файл copyright:
+http://dep.debian.net/deps/dep5/
+
+------------
+
+Сборка i386:
+
+sudo DIST=testing ARCH=i386 pdebuild
+
+добавление GPG-подписи
+debsign xxx.changes
+
+https://wiki.ubuntu.com/PbuilderHowto
+
++ статья на хабре
+
+-------------
+
+отослать RFS в их mailing list (шаблон есть на странице пакета на mentors...)
+
+-----------
+
+перед заливкой
+ - попробовать поставить
+ - проверить работу
+
+
+--------
+
+поставить пакет maint-guide и взять оттуда pdf
+
+--------
+
+патчи делаются так:
+dpkg-source --commit
