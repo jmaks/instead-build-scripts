@@ -1,6 +1,0 @@
-instead (1.5.2-1) unstable; urgency=low
-
-  * Initial release (Closes: #641307)
-  * Added patch for invalid transparency of window icon
-
- -- Sam Protsenko <joe.skb7@gmail.com>  Tue, 01 Nov 2011 22:22:07 +0200

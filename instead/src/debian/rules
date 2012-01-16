@@ -1,0 +1,36 @@
+#!/usr/bin/make -f
+
+TMP_DIR=$(CURDIR)/debian/tmp
+DEST_DIR=$(TMP_DIR)/usr
+
+%:
+	dh $@
+
+override_dh_auto_configure:
+	# Making links for man files
+	ln -s instead.6 doc/sdl-instead.6
+	ln -s instead.txt doc/sdl-instead.txt
+
+	# Selecting proper Rules.make.xxx file
+	rm -f Rules.make
+	ln -s Rules.make.system Rules.make
+
+	# Configuring build environment
+	echo "2" | ./configure.sh
+
+override_dh_auto_build:
+	$(MAKE) PREFIX=/usr BIN=/usr/games DATAPATH=/usr/share/games/instead
+
+override_dh_auto_clean:
+	$(MAKE) clean
+
+	# Removing links for man files
+	rm -f doc/sdl-instead.6
+	rm -f doc/sdl-instead.txt
+
+	# Selecting default Rules.make.xxx file
+	rm -f Rules.make
+	ln -s Rules.make.standalone Rules.make
+
+override_dh_auto_install:
+	$(MAKE) install DESTDIR=$(TMP_DIR) PREFIX=/usr DATAPATH=$(DEST_DIR)/share/games/instead BIN=$(DEST_DIR)/games

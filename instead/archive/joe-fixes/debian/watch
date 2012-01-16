@@ -1,7 +1,0 @@
-# See uscan(1) for format
-
-# Compulsory line, this is a version 3 file
-version=3
-
-# <Webpage URL> <string match>
-http://code.google.com/p/instead/downloads/list //instead\.googlecode\.com/files/instead\_(.*)\.tar\.gz

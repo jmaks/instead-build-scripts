@@ -1,0 +1,5 @@
+?package(instead): needs="X11" \
+			 section="Games/Adventure" \
+			 title="INSTEAD" \
+			 command="/usr/games/instead" \
+			 icon="/usr/share/pixmaps/instead.xpm"
