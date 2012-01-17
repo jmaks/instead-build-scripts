@@ -84,3 +84,4 @@ dpkg-source --commit
 
 Ускорение сборки (без ввода пароля)
 http://habrahabr.ru/blogs/ubuntu/61644/
+в файл .gnupg/gpg.conf добавить use-agent
