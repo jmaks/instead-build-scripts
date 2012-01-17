@@ -1,3 +1,9 @@
+instead (1.6.0-2) unstable; urgency=low
+
+  * Fixed debian/control file (Vcs-*)
+
+ -- Sam Protsenko <joe.skb7@gmail.com>  Tue, 17 Jan 2012 18:24:28 +0200
+
 instead (1.6.0-1) unstable; urgency=low
 
   * Initial release (Closes: #641307)
