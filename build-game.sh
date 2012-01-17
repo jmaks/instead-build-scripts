@@ -1,22 +1,34 @@
 #!/bin/sh
 
+# ---- AUX FUNCTIONS ----
+
+# $1: path to packet dir that contains debian/ dir
+extract_ver() {
+    ls -1 $1 | grep .orig.tar.gz | sed -rn 's/.*_(.*)\.orig\.tar\.gz/\1/p'
+}
+
+# $1: path to packet dir that contains debian/ dir
+extract_verd() {
+    cat $1/debian/changelog | head -1 | sed -rn 's/.*\((.*)\).*/\1/p'
+}
+
 # ---- VARIABLES ----
 
 gn=$(ls -1 | grep orig.tar.gz | sed -rn 's/.*-(.*)_.*/\1/p')
-ver=$(ls -l | grep orig.tar.gz | grep -Po '\d\.\d')
-verd=$ver-1 # +debian packaging ver
+ver=$(extract_ver .)
+verd=$(extract_verd .) # +debian packaging ver
 game_dir=instead-game-${gn}-$ver
 game_orig_tar=instead-game-${gn}_$ver.orig.tar.gz
 cur_dir=$(pwd)
 home_dir=$(echo ~)
 build_dir=../build_all
 
-build_files=" \
-    instead-game-${gn}_${verd}_all.deb \
-    instead-game-${gn}_${verd}_amd64.build \
-    instead-game-${gn}_${verd}_amd64.changes \
-    instead-game-${gn}_${verd}.debian.tar.gz \
-    instead-game-${gn}_${verd}.dsc"
+build_files="\
+instead-game-${gn}_${verd}_all.deb \
+instead-game-${gn}_${verd}_amd64.build \
+instead-game-${gn}_${verd}_amd64.changes \
+instead-game-${gn}_${verd}.debian.tar.gz \
+instead-game-${gn}_${verd}.dsc"
 
 # ---- FUNCTIONS ----
 

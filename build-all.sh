@@ -6,7 +6,7 @@ cur_dir=$(pwd)
 opt="" # option for each ./build.sh execution
 msg="" # message that shows before each action
 
-packet_list=" \
+packet_list="\
 instead \
 instead-game-cat \
 instead-game-lines \
@@ -34,9 +34,13 @@ case "$1" in
         opt=--distclean
         msg=Purging
         ;;
-    *)
+    "-b"|"--build"|"-a"|"--all")
         opt=--all
         msg=Building
+        ;;
+    *)
+        echo "Invalid argument specified"
+        exit 1
         ;;
 esac
 

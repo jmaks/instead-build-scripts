@@ -2,16 +2,28 @@
 
 # Commonly used variables and functions
 
+# ---- AUX FUNCTIONS ----
+
+# $1: path to packet dir that contains debian/ dir
+extract_ver() {
+    ls -1 $1 | grep .orig.tar.gz | sed -rn 's/.*_(.*)\.orig\.tar\.gz/\1/p'
+}
+
+# $1: path to packet dir that contains debian/ dir
+extract_verd() {
+    cat $1/debian/changelog | head -1 | sed -rn 's/.*\((.*)\).*/\1/p'
+}
+
 # ---- VARIABLES ----
 
-ver=$(ls -l | grep orig.tar.gz | grep -Po '\d\.\d\.\d')
-verd=$ver-1 # +debian packaging ver
+ver=$(extract_ver .)
+verd=$(extract_verd .) # +debian packaging ver
 instead_dir=instead-$ver
 instead_orig_tar=instead_$ver.orig.tar.gz
 cur_dir=$(pwd)
 home_dir=$(echo ~)
 
-build_files=" \
+build_files="\
 instead_${verd}_amd64.deb \
 instead_${verd}_amd64.build \
 instead_${verd}_amd64.changes \

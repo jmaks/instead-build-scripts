@@ -4,14 +4,15 @@
 
 # ---- VARIABLES ----
 
-packet_files=" \
-instead/build_${archit}/instead-data_${instead_ver}_all.deb \
-instead/build_${archit}/instead_${instead_ver}_${archit}.deb \
-instead-game-cat/build_all/instead-game-cat_${cat_ver}_all.deb \
-instead-game-lines/build_all/instead-game-lines_${lines_ver}_all.deb \
-instead-game-toilet3in1/build_all/instead-game-toilet3in1_${toilet_ver}_all.deb"
+packet_files="\
+instead/build_${archit}/instead-data_${instead_verd}_all.deb \
+instead/build_${archit}/instead_${instead_verd}_${archit}.deb \
+instead-game-cat/build_all/instead-game-cat_${cat_verd}_all.deb \
+instead-game-lines/build_all/instead-game-lines_${lines_verd}_all.deb \
+instead-game-toilet3in1/build_all/instead-game-toilet3in1_${toilet_verd}_all.deb"
 
-packets="instead-game-cat \
+packets="\
+instead-game-cat \
 instead-game-lines \
 instead-game-toilet3in1 \
 instead \
