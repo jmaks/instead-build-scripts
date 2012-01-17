@@ -9,7 +9,7 @@ License: GPL-2
 
 Files: debian/*
 Copyright: 2011-2012, Sam Protsenko <joe.skb7@gmail.com>
-License: GPL-2+
+License: GPL-2
 
 Files: src/zlib/*
 Copyright: 1995-2005, Mark Adler
