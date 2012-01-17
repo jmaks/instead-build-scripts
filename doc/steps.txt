@@ -75,3 +75,7 @@ https://wiki.ubuntu.com/PbuilderHowto
 
 патчи делаются так:
 dpkg-source --commit
+
+--------
+
+инкрементировать версию пакета: dhc -i
