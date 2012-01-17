@@ -12,9 +12,12 @@ allow_unsigned_uploads = 0
 
 Заполнил полностью профиль, в т.ч. залил GPG-ключ. Как экспортировать - написано тут
 http://www.debuntu.org/how-to-import-export-gpg-key-pair
+Как залить: http://www.debian-administration.org/articles/451
 
 $ gpg --output mygpgkey_pub.gpg --armor --export ABCDFE01
 и указал полученный файл на странице
+
+Залил на hkp://keys.gnupg.net (ключ 31B38826)
 
 -------------------
 
