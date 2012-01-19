@@ -1,8 +1,8 @@
-instead (1.6.0-2) unstable; urgency=low
+instead (1.6.1-1) unstable; urgency=low
 
-  * Fixed debian/control file (Vcs-*)
+  * Fixed build for Hurd
 
- -- Sam Protsenko <joe.skb7@gmail.com>  Tue, 17 Jan 2012 18:24:28 +0200
+ -- Sam Protsenko <joe.skb7@gmail.com>  Thu, 19 Jan 2012 15:09:11 +0200
 
 instead (1.6.0-1) unstable; urgency=low
 
