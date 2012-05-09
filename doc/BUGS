@@ -1,0 +1,42 @@
+instead-data        <none> может нет версии в data?
+
+Can not upgrade package instead, because new package instead-data try rewrite files from old package instead.
+Package instead missing Replaces and/or Breaks derective in control file.
+
+Package: instead
+Version: 1.6.0-1
+Severity: serious
+
+Package instead missing Replaces and/or Breaks derective in control file.
+
+-- System Information:
+Debian Release: wheezy/sid
+  APT prefers testing
+  APT policy: (501, 'testing'), (101, 'stable'), (21, 'unstable')
+Architecture: amd64 (x86_64)
+
+Kernel: Linux 3.2.0-1-amd64 (SMP w/2 CPU cores)
+Locale: LANG=uk_UA.UTF-8, LC_CTYPE=uk_UA.UTF-8 (charmap=UTF-8)
+Shell: /bin/sh linked to /bin/dash
+
+Versions of packages instead depends on:
+ii  instead-data        <none>
+ii  libc6               2.13-24
+ii  libgdk-pixbuf2.0-0  2.24.0-2
+ii  libglib2.0-0        2.30.2-4
+ii  libgtk2.0-0         2.24.8-3
+ii  liblua5.1-0         5.1.4-12
+ii  libsdl-image1.2     1.2.11-2
+ii  libsdl-mixer1.2     1.2.11-7
+ii  libsdl-ttf2.0-0     2.0.9-1.1
+ii  libsdl1.2debian     1.2.14-7
+ii  zlib1g              1:1.2.3.4.dfsg-3
+
+instead recommends no packages.
+
+instead suggests no packages.
+
+-- no debconf information
+
+
+-----------------------------------------
