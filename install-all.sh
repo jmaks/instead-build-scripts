@@ -1,5 +1,7 @@
 #!/bin/sh
 
+# Script installs or purges all existed packages.
+
 . ./common-def.sh
 
 # ---- VARIABLES ----

@@ -1,5 +1,7 @@
 #!/bin/sh
 
+# Script builds all packets
+
 # ---- VARIABLES ----
 
 cur_dir=$(pwd)

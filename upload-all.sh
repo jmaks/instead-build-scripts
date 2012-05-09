@@ -1,5 +1,7 @@
 #!/bin/sh
 
+# Script uploads to mentors.debian.org all the created packets.
+
 . ./common-def.sh
 
 # ".changes" files for each deb-packet

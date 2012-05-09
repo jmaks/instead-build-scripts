@@ -1,5 +1,8 @@
 #!/bin/sh
 
+# Script builds some game packet.
+# Needs to be invoked from game directory.
+
 # ---- AUX FUNCTIONS ----
 
 # $1: path to packet dir that contains debian/ dir
