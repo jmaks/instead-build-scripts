@@ -13,10 +13,15 @@ instead-game-lines/build_all/instead-game-lines_${lines_verd}_amd64.changes \
 instead-game-toilet3in1/build_all/instead-game-toilet3in1_${toilet_verd}_amd64.changes"
 
 for f in $changes_list; do
+    if [ ! -e $f ]; then
+        echo "*** File $(basename $f) not found; SKIPPING"
+        continue
+    fi
+
     d=$(dirname "$cur_dir/$f")
     b=$(basename "$cur_dir/$f")
     cd "$d"
-    echo "Uploading $b..."
+    echo "*** Uploading $b..."
     dput debexpo $(basename $f)
     echo "Uploading $b [OK]"
     cd "$cur_dir"
