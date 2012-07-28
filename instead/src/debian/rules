@@ -11,10 +11,6 @@ override_dh_auto_configure:
 	ln -s instead.6 doc/sdl-instead.6
 	ln -s instead.txt doc/sdl-instead.txt
 
-	# Selecting proper Rules.make.xxx file
-	rm -f Rules.make
-	ln -s Rules.make.system Rules.make
-
 	# Configuring build environment
 	echo "2" | ./configure.sh
 
