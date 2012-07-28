@@ -41,7 +41,6 @@ move() {
     echo "Moving files to build dir [OK]"
 }
 
-
 # ---- ENTRY POINT ----
 
 case "$1" in
