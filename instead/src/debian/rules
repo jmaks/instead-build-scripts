@@ -24,9 +24,5 @@ override_dh_auto_clean:
 	rm -f doc/sdl-instead.6
 	rm -f doc/sdl-instead.txt
 
-	# Selecting default Rules.make.xxx file
-	rm -f Rules.make
-	ln -s Rules.make.standalone Rules.make
-
 override_dh_auto_install:
 	$(MAKE) install DESTDIR=$(TMP_DIR) PREFIX=/usr DATAPATH=$(DEST_DIR)/share/games/instead BIN=$(DEST_DIR)/games
