@@ -31,6 +31,10 @@ move() {
     rm_build_dir
     mkdir "$build_dir_amd64"
     for f in $build_files; do
+        if [ ! -f $f ]; then
+            echo "Can't move file: file doesn't exist: $f [FAILED]"
+            exit 1
+        fi
         mv $f "$build_dir_amd64"
     done
     cp -f instead_*.orig.tar.gz "$build_dir_amd64"
