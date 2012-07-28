@@ -1,18 +1,20 @@
 instead (1.7.0-1) unstable; urgency=low
 
-  * Increased version
-  * Removed linking patch as it's not necessary
+  * New upstream release (Closes: #664587).
+  * Removed linking patch as it's not necessary (fixed upstream).
+  * Added copyright for games/tutorial3/sv_ttt.xm.
+  * Added missed copyright for themes/default/sans*.ttf.
 
- -- Sam Protsenko <joe.skb7@gmail.com>  Wed, 9 May 2012 15:00:00 +0300
+ -- Sam Protsenko <joe.skb7@gmail.com>  Wed, 28 Jul 2012 22:13:00 +0300
 
 instead (1.6.1-1) unstable; urgency=low
 
-  * Fixed build for Hurd
+  * Fixed build for Hurd.
 
  -- Sam Protsenko <joe.skb7@gmail.com>  Thu, 19 Jan 2012 15:09:11 +0200
 
 instead (1.6.0-1) unstable; urgency=low
 
-  * Initial release (Closes: #641307)
+  * Initial release (Closes: #641307).
 
  -- Sam Protsenko <joe.skb7@gmail.com>  Sun, 15 Jan 2012 17:02:02 +0200
