@@ -12,36 +12,42 @@ instead-game-cat/build_all/instead-game-cat_${cat_verd}_amd64.changes \
 instead-game-lines/build_all/instead-game-lines_${lines_verd}_amd64.changes \
 instead-game-toilet3in1/build_all/instead-game-toilet3in1_${toilet_verd}_amd64.changes"
 
-method=""      # uploading method: either HTTP or FTP
+action=""      # uploading method: either HTTP or FTP; or "purge" for removing files
 sel_config=""  # selected config inlay (see ~/.dput.cf file)
 
 print_usage() {
-    echo "Usage: ./$(basename $0) [method]"
+    echo "Usage: ./$(basename $0) [action]"
     echo
-    echo "Uploading methods:"
-    echo "--http - Upload using HTTP method"
-    echo "--ftp  - Upload using FTP method"
+    echo "Actions:"
+    echo "--http   - Upload using HTTP method"
+    echo "--ftp    - Upload using FTP method"
+    echo "--purge  - Remove all files on mentors"
     echo
-    echo "By default using HTTP method"
+    echo "By default using upload via HTTP"
     echo "See also ~/.dput.cf file"
 }
 
 # Choosing upload method: HTTP/FTP
 case "$1" in
     "--ftp")
-        method=FTP
+        action=FTP
         sel_config=mentors-ftp
+        echo "*** Selected: upload via $action"
         ;;
-    "--http"|"")
-        method=HTTP
+    "--http")
+        action=HTTP
         sel_config=mentors
+        echo "*** Selected: upload via $action"
+        ;;
+    "--purge")
+        action=purge
+        echo "*** Selected: removing my files on mentors.debian.org"
         ;;
     *)
         echo "Specified invalid method"
         print_usage
         exit 1
 esac
-echo "*** Using method $method"
 
 # Uploading all changes
 for f in $changes_list; do
@@ -53,17 +59,24 @@ for f in $changes_list; do
     d=$(dirname "$cur_dir/$f")
     b=$(basename "$cur_dir/$f")
     cd "$d"
-    echo "*** Uploading $b..."
 
-    # Uploading
-    dput $sel_config $(basename $f)
-    res=$?
-    if [ $res ]; then
-        status="[FAILED]"
+    # Action
+    if [ $action = "purge" ]; then
+        # Removing
+        echo "*** Removing $b..."
+        dcut --input $(basename $f)
     else
-        status="[OK]"
+        # Uploading
+        echo "*** Uploading $b..."
+        dput $sel_config $(basename $f)
+        res=$?
+        if [ $res ]; then
+            status="[FAILED]"
+        else
+            status="[OK]"
+        fi
+        echo "Uploading $b: $status"
     fi
-    echo "Uploading $b: $status"
     echo
 
     cd "$cur_dir"
