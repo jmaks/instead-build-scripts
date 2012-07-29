@@ -22,7 +22,17 @@ for f in $changes_list; do
     b=$(basename "$cur_dir/$f")
     cd "$d"
     echo "*** Uploading $b..."
+
     dput debexpo $(basename $f)
-    echo "Uploading $b [OK]"
+    res=$?
+    status
+    if [ $res ]; then
+        status="[FAILED]"
+    else
+        status="[OK]"
+    fi
+    echo "Uploading $b $status"
+    echo
+
     cd "$cur_dir"
 done
