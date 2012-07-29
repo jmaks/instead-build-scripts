@@ -40,6 +40,7 @@ move_result_i386() {
     mkdir "$build_dir_i386"
     cp -Rf $result_dir_i386/* $build_dir_i386
     cp -f instead_*.orig.tar.gz "$build_dir_i386"
+    rm -f instead_${verd}_source.changes # unnecessary file
     echo "Moving result files for i386 [OK]"
 }
 

@@ -31,7 +31,11 @@ move() {
     rm_build_dir
     mkdir "$build_dir_amd64"
     for f in $build_files; do
-        if [ ! -f $f ]; then
+        if [ "$f" = instead_${verd}_source.changes ]; then
+            # i386 build file; don't process it
+            continue
+        fi
+        if [ ! -f "$f" ]; then
             echo "Can't move file: file doesn't exist: $f [FAILED]"
             exit 1
         fi

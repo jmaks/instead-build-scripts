@@ -27,11 +27,11 @@ build_files="\
 instead_${verd}_amd64.deb \
 instead_${verd}_amd64.build \
 instead_${verd}_amd64.changes \
+instead_${verd}_source.changes \
 instead_${verd}.debian.tar.gz \
 instead_${verd}.dsc \
 instead-data_${verd}_all.deb"
-# TODO
-# instead_${verd}_source.changes -- this file was dissapear, don't know why; investigate
+# _source.changes creates only by i386 build process
 
 # ---- FUNCTIONS ----
 
