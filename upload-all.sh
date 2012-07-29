@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# Script uploads to mentors.debian.org all the created packets.
+# Script for uploading/removing to mentors.debian.org all the created packets.
 
 . ./common-def.sh
 
@@ -23,7 +23,6 @@ print_usage() {
     echo "--ftp    - Upload using FTP method"
     echo "--purge  - Remove all files on mentors"
     echo
-    echo "By default using upload via HTTP"
     echo "See also ~/.dput.cf file"
 }
 
@@ -48,6 +47,7 @@ case "$1" in
         print_usage
         exit 1
 esac
+echo
 
 # Uploading all changes
 for f in $changes_list; do
