@@ -68,7 +68,7 @@ for f in $changes_list; do
     else
         # Uploading
         echo "*** Uploading $b..."
-        dput $sel_config $(basename $f)
+        dput -f $sel_config $(basename $f)
         res=$?
         if [ $res ]; then
             status="[FAILED]"
