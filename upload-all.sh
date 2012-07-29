@@ -25,7 +25,6 @@ for f in $changes_list; do
 
     dput debexpo $(basename $f)
     res=$?
-    status
     if [ $res ]; then
         status="[FAILED]"
     else
