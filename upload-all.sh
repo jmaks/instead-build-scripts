@@ -14,7 +14,7 @@ instead-game-toilet3in1/build_all/instead-game-toilet3in1_${toilet_verd}_amd64.c
 
 for f in $changes_list; do
     if [ ! -e $f ]; then
-        echo "*** File $(basename $f) not found; SKIPPING"
+        echo "*** File $(basename $f) not found: [SKIP]"
         continue
     fi
 
@@ -30,7 +30,7 @@ for f in $changes_list; do
     else
         status="[OK]"
     fi
-    echo "Uploading $b $status"
+    echo "Uploading $b: $status"
     echo
 
     cd "$cur_dir"
