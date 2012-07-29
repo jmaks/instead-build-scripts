@@ -20,7 +20,7 @@ print_usage() {
     echo
     echo "Actions:"
     echo "--http   - Upload using HTTP method"
-    echo "--ftp    - Upload using FTP method"
+    echo "--ftp    - Upload using FTP method; this is preferred method"
     echo "--purge  - Remove all files on mentors"
     echo
     echo "See also ~/.dput.cf file"
