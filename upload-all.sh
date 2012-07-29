@@ -60,6 +60,9 @@ for f in $changes_list; do
     b=$(basename "$cur_dir/$f")
     cd "$d"
 
+    # Getting rid of previous upload (maybe not finished)
+    rm -f *.upload
+
     # Action
     if [ $action = "purge" ]; then
         # Removing
