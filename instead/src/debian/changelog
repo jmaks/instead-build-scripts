@@ -1,11 +1,11 @@
-instead (1.7.0-1) unstable; urgency=low
+instead (1.8.2-1) unstable; urgency=low
 
   * New upstream release (Closes: #664587).
   * Removed linking patch as it's not necessary (fixed upstream).
   * Added copyright for games/tutorial3/sv_ttt.xm.
   * Added missed copyright for themes/default/sans*.ttf.
 
- -- Sam Protsenko <joe.skb7@gmail.com>  Wed, 28 Jul 2012 22:13:00 +0300
+ -- Sam Protsenko <joe.skb7@gmail.com>  Tue, 15 Jan 2013 00:24:00 +0200
 
 instead (1.6.1-1) unstable; urgency=low
 
