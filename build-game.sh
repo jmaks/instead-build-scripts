@@ -56,7 +56,7 @@ prepare() {
 build() {
     echo "Start building deb..."
     cd $game_dir
-    debuild --lintian-opts
+    debuild --lintian-opts -i
     res=$?
     cd $cur_dir
     if [ $res -eq 0 ]; then

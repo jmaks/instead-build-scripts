@@ -11,7 +11,7 @@ build_dir_amd64=../build_amd64
 build() {
     echo "Start building deb..."
     cd $instead_dir
-    debuild --lintian-opts
+    debuild --lintian-opts -i
     res=$?
     cd $cur_dir
     if [ $res -eq 0 ]; then

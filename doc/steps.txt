@@ -35,7 +35,7 @@ http://debianadmin.ru/otpravka-pochty-cherez-vneshnij-smtp-server-exim4.html
 
 ------------
 
-debuild --lintian-opts
+debuild --lintian-opts -i
 dput debexpo instead_1.5.1-1_amd64.changes
 
 ------------
