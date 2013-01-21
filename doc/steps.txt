@@ -76,6 +76,23 @@ https://wiki.ubuntu.com/PbuilderHowto
 патчи делаются так:
 dpkg-source --commit
 
+Подробно
+~~~~~~~~
+
+joe@joe-pc:/tmp/1$ ls -lFa
+итого 3884
+drwxr-xr-x  3 joe  joe     4096 Янв 21 21:53 ./
+drwxrwxrwt 27 root root    4096 Янв 21 21:53 ../
+drwxr-xr-x 11 joe  joe     4096 Янв 21 21:52 instead-1.8.2/
+-rw-r--r--  1 joe  joe  3961781 Янв 14 23:29 instead_1.8.2.orig.tar.gz
+joe@joe-pc:/tmp/1$ cd instead-1.8.2/
+joe@joe-pc:/tmp/1/instead-1.8.2$ # do something...
+joe@joe-pc:/tmp/1/instead-1.8.2$ dpkg-source --commit
+dpkg-source: инфо: обнаружены локальные изменения, изменённые файлы:
+ instead-1.8.2/desktop/instead.desktop.in
+Введите желаемое имя заплаты:
+
+
 --------
 
 инкрементировать версию пакета: dhc -i
