@@ -1,0 +1,20 @@
+Description: Remove "Encoding" entry in desktop file
+ Regarding Lintian rule "desktop-entry-contains-encoding-key":
+ .
+ The Encoding key is now deprecated by the FreeDesktop standard
+ and all strings are required to be encoded in UTF-8.
+ .
+ This desktop entry explicitly specifies an Encoding of UTF-8,
+ which is harmless but no longer necessary.
+Author: Sam Protsenko <joe.skb7@gmail.com>
+Reviewed-By: Alexander GQ Gerasiov <gq@debian.org>
+Last-Update: <2013-01-21>
+
+--- instead-1.8.2.orig/desktop/instead.desktop.in
++++ instead-1.8.2/desktop/instead.desktop.in
+@@ -1,5 +1,4 @@
+ [Desktop Entry]
+-Encoding=UTF-8
+ Version=1.8.2
+ Type=Application
+ Name=INSTEAD

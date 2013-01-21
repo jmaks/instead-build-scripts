@@ -4,6 +4,7 @@ instead (1.8.2-1) unstable; urgency=low
   * Removed linking patch as it's not necessary (fixed upstream).
   * Added copyright for games/tutorial3/sv_ttt.xm.
   * Added missed copyright for themes/default/sans*.ttf.
+  * Added patch fixes desktop entry.
 
  -- Sam Protsenko <joe.skb7@gmail.com>  Tue, 15 Jan 2013 00:24:00 +0200
 
