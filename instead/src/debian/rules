@@ -13,6 +13,13 @@ DEST_DIR=$(TMP_DIR)/usr
 	dh $@
 
 override_dh_auto_configure:
+	# Replacing themes/default/sans*.ttf fonts with system fonts
+	rm -f themes/default/sans*.ttf
+	ln -s /usr/share/fonts/truetype/liberation/LiberationSans-Regular.ttf    themes/default/sans.ttf
+	ln -s /usr/share/fonts/truetype/liberation/LiberationSans-Bold.ttf       themes/default/sans-b.ttf
+	ln -s /usr/share/fonts/truetype/liberation/LiberationSans-Italic.ttf     themes/default/sans-i.ttf
+	ln -s /usr/share/fonts/truetype/liberation/LiberationSans-BoldItalic.ttf themes/default/sans-bi.ttf
+
 	# Making links for man files
 	ln -s instead.6 doc/sdl-instead.6
 	ln -s instead.txt doc/sdl-instead.txt

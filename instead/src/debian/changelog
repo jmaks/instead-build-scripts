@@ -5,8 +5,9 @@ instead (1.8.2-1) unstable; urgency=low
   * Added copyright for games/tutorial3/sv_ttt.xm.
   * Added missed copyright for themes/default/sans*.ttf.
   * Added patch fixes desktop entry.
+  * themes/default/sans*.ttf fonts replaced with system ones.
 
- -- Sam Protsenko <joe.skb7@gmail.com>  Tue, 15 Jan 2013 00:24:00 +0200
+ -- Sam Protsenko <joe.skb7@gmail.com>  Tue, 22 Jan 2013 01:55:00 +0200
 
 instead (1.6.1-1) unstable; urgency=low
 
