@@ -4,11 +4,11 @@ Upstream-Contact: Peter Kosyh <p.kosyh@gmail.com>
 Source: http://instead.googlecode.com
 
 Files: *
-Copyright: 2009-2012, Peter Kosyh <p.kosyh@gmail.com>
+Copyright: 2009-2013, Peter Kosyh <p.kosyh@gmail.com>
 License: GPL-2
 
 Files: debian/*
-Copyright: 2011-2012, Sam Protsenko <joe.skb7@gmail.com>
+Copyright: 2011-2013, Sam Protsenko <joe.skb7@gmail.com>
 License: GPL-2
 
 Files: src/zlib/*
