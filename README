@@ -1,0 +1,6 @@
+For building use:
+
+$ cd instead/src
+$ build.sh -amd64
+
+Resulting packets will be placed to src/build_amd64.
