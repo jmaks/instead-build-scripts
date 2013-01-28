@@ -1,4 +1,4 @@
-instead (1.8.2-1) unstable; urgency=low
+instead (1.8.3-1) unstable; urgency=low
 
   * New upstream release (Closes: #664587).
   * Removed linking patch as it's not necessary (fixed upstream).
@@ -7,7 +7,7 @@ instead (1.8.2-1) unstable; urgency=low
   * Added patch fixes desktop entry.
   * themes/default/sans*.ttf fonts replaced with system ones.
 
- -- Sam Protsenko <joe.skb7@gmail.com>  Tue, 22 Jan 2013 01:55:00 +0200
+ -- Sam Protsenko <joe.skb7@gmail.com>  Tue, 29 Jan 2013 00:31:00 +0200
 
 instead (1.6.1-1) unstable; urgency=low
 
