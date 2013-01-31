@@ -6,6 +6,7 @@ include /usr/share/dpkg/buildflags.mk
 
 TMP_DIR=$(CURDIR)/debian/tmp
 DEST_DIR=$(TMP_DIR)/usr
+PROC_NUM=$(shell cat /proc/cpuinfo | grep ^proc | wc -l)
 
 %:
 	dh $@
@@ -19,7 +20,7 @@ override_dh_auto_configure:
 	echo "2" | ./configure.sh
 
 override_dh_auto_build:
-	$(MAKE) PREFIX=/usr BIN=/usr/games DATAPATH=/usr/share/games/instead
+	$(MAKE) PREFIX=/usr BIN=/usr/games DATAPATH=/usr/share/games/instead -j$(PROC_NUM)
 
 override_dh_auto_clean:
 	$(MAKE) clean
