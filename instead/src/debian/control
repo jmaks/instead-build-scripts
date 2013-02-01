@@ -46,6 +46,10 @@ Architecture: all
 Depends: ${misc:Depends}
 Description: Common documentation for INSTEAD
  This package contains base documentation (common for all languages).
+ .
+ At the moment this contains only examples for developer's manual.
+ These examples (written in Lua) demonstrate how to implement
+ common features when you write a game for INSTEAD.
 
 Package: instead-doc-en
 Section: doc
@@ -53,6 +57,8 @@ Architecture: all
 Depends: ${misc:Depends}, instead-doc-base (= ${source:Version})
 Description: English documentation for INSTEAD
  This package contains game developer manual and examples in English.
+ Manual describes basic API in Lua and how to create games for INSTEAD engine.
+ .
  Unfortunately, complete and latest documentation currently available only
  in Russian.
 
@@ -62,3 +68,6 @@ Architecture: all
 Depends: ${misc:Depends}, instead-doc-base (= ${source:Version})
 Description: Russian documentation for INSTEAD
  This package contains game developer manual and examples in Russian.
+ Manual describes basic API in Lua and how to create games for INSTEAD engine.
+ .
+ Russian documentation is complete and up to date, so it's preferred to use it.
