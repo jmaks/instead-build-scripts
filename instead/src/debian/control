@@ -39,3 +39,26 @@ Description: data files for INSTEAD
  .
  This package contains language files, graphical themes, STEAD scripts
  and tutorial.
+
+Package: instead-doc-base
+Section: doc
+Architecture: all
+Depends: ${misc:Depends}
+Description: Common documentation for INSTEAD
+ This package contains base documentation (common for all languages).
+
+Package: instead-doc-en
+Section: doc
+Architecture: all
+Depends: ${misc:Depends}, instead-doc-base (= ${source:Version})
+Description: English documentation for INSTEAD
+ This package contains game developer manual and examples in English.
+ Unfortunately, complete and latest documentation currently available only
+ in Russian.
+
+Package: instead-doc-ru
+Section: doc
+Architecture: all
+Depends: ${misc:Depends}, instead-doc-base (= ${source:Version})
+Description: Russian documentation for INSTEAD
+ This package contains game developer manual and examples in Russian.

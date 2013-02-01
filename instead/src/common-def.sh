@@ -30,7 +30,10 @@ instead_${verd}_amd64.changes \
 instead_${verd}_source.changes \
 instead_${verd}.debian.tar.gz \
 instead_${verd}.dsc \
-instead-data_${verd}_all.deb"
+instead-data_${verd}_all.deb \
+instead-doc-base_1.8.3-1_all.deb \
+instead-doc-en_1.8.3-1_all.deb \
+instead-doc-ru_1.8.3-1_all.deb"
 # _source.changes creates only by i386 build process
 
 # ---- FUNCTIONS ----
