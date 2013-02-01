@@ -28,7 +28,8 @@ print_usage() {
 
 # Choosing upload method: HTTP/FTP
 case "$1" in
-    "--ftp")
+    "--ftp" | "")
+        # Prefer FTP method by default
         action=FTP
         sel_config=mentors-ftp
         echo "*** Selected: upload via $action"
