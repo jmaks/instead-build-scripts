@@ -1,3 +1,6 @@
+# hooks: apt-get update
+HOOKDIR="/home/joe/.pdebuild_hooks"
+
 # кодовые названия дистрибутивов Debian
 UNSTABLE_CODENAME="unstable"
 TESTING_CODENAME="testing"
