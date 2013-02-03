@@ -24,6 +24,9 @@ override_dh_auto_configure:
 	# Configuring build environment
 	echo "2" | ./configure.sh
 
+override_dh_compress:
+	dh_compress --exclude=.pdf --exclude=.lua
+
 override_dh_auto_build:
 	$(MAKE) PREFIX=/usr BIN=/usr/games DATAPATH=/usr/share/games/instead
 
