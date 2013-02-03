@@ -45,7 +45,16 @@ move() {
     echo "Moving files to build dir [OK]"
 }
 
+test_if_run_from_build_sh() {
+    if [ -z "$RUN_FROM_BUILD_SH" ]; then
+        echo "Please use build.sh script instead of running this one"
+        exit 1
+    fi
+}
+
 # ---- ENTRY POINT ----
+
+test_if_run_from_build_sh
 
 case "$1" in
     "-c"|"--clean")

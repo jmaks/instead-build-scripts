@@ -24,6 +24,9 @@ build_script_amd64=build_amd64.sh
 
 # ---- ENTRY POINT ----
 
+# Let underlaying scripts know that they runned from build.sh
+export RUN_FROM_BUILD_SH=y
+
 case "$1" in
     "-i386")
         ./$build_script_i386 --all
