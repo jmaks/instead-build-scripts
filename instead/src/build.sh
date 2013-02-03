@@ -27,6 +27,10 @@ build_script_amd64=build_amd64.sh
 # Let underlaying scripts know that they runned from build.sh
 export RUN_FROM_BUILD_SH=y
 
+# Multithreaded make
+proc_num=$(cat /proc/cpuinfo | grep ^proc | wc -l)
+export DEB_BUILD_OPTIONS="parallel=$proc_num"
+
 case "$1" in
     "-i386")
         ./$build_script_i386 --all

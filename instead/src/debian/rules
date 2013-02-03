@@ -4,12 +4,17 @@
 DPKG_EXPORT_BUILDFLAGS = 1
 include /usr/share/dpkg/buildflags.mk
 
-TMP_DIR=$(CURDIR)/debian/tmp
-DEST_DIR=$(TMP_DIR)/usr
-PROC_NUM=$(shell cat /proc/cpuinfo | grep ^proc | wc -l)
+# Multithreaded make
+ifneq (,$(filter parallel=%,$(DEB_BUILD_OPTIONS)))
+	NUMJOBS = $(patsubst parallel=%,%,$(filter parallel=%,$(DEB_BUILD_OPTIONS)))
+	MAKEFLAGS += -j$(NUMJOBS)
+endif
+
+TMP_DIR = $(CURDIR)/debian/tmp
+DEST_DIR = $(TMP_DIR)/usr
 
 %:
-	dh $@
+	dh $@ --parallel
 
 override_dh_auto_configure:
 	# Making links for man files
@@ -20,7 +25,7 @@ override_dh_auto_configure:
 	echo "2" | ./configure.sh
 
 override_dh_auto_build:
-	$(MAKE) PREFIX=/usr BIN=/usr/games DATAPATH=/usr/share/games/instead -j$(PROC_NUM)
+	$(MAKE) PREFIX=/usr BIN=/usr/games DATAPATH=/usr/share/games/instead
 
 override_dh_auto_clean:
 	$(MAKE) clean
