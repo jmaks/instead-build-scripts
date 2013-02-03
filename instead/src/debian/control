@@ -9,6 +9,7 @@ Homepage: http://instead.googlecode.com
 Package: instead
 Architecture: any
 Depends: ${shlibs:Depends}, ${misc:Depends}, instead-data (= ${source:Version})
+Suggests: instead-doc-en | instead-doc-ru
 Description: Simple text adventures/visual novels engine
  INSTEAD -- INterpreter of Simple TExt ADventure.
  Using INSTEAD you can create and play games that could be classified
