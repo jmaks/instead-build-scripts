@@ -1,0 +1,109 @@
+Description: Replace tutorial music for DFSG compliance
+ Previous tutorial music file was "sv_ttt.xm" and has CC-BY-NC-SA
+ license that is not compliant with DFSG. This patch replaces
+ that file with new music by CC-BY-SA 3.0 that compliant with
+ DFSG rules.
+Author: Sam Protsenko <joe.skb7@gmail.com>
+Reviewed-By: Alexander GQ Gerasiov <gq@debian.org>
+Last-Update: <2013-03-01>
+
+--- instead-1.8.3.orig/games/tutorial3/main-it.lua
++++ instead-1.8.3/games/tutorial3/main-it.lua
+@@ -7,7 +7,7 @@ game.use = 'Non funziona...';
+ 
+ game.pic = 'instead.png';
+ 
+-set_music('sv_ttt.xm');
++set_music('blurry_xmas_jam.xm');
+ 
+ main = room {
+ 	nam = 'Tutorial',
+@@ -202,7 +202,7 @@ theend = room {
+ 	dsc = [[Con l'aiuto del menu potete scegliere un gioco, salvare o caricare una partita, oltre a svariate altre cose. Per aprire il menu premete "Esc" o fate click sull'icona di menu in basso a destra.^^
+ 		Ora siete pronti a giocare. Buona Fortuna!!!^^
+ 		Scaricate i giochi per INSTEAD qui: ]]..txtu("http://instead.googlecode.com")..[[^^
+-		Il tutorial si avvale del brano musicale The Titan Turrican di svenzzon.]],
++		Il tutorial si avvale del brano musicale XMas Jam di BLuRry.]],
+ 	obj = { vway('keys', 'Vedi {lista delle scorciatoie da tastiera}.', 'help')},
+ };
+ 
+--- instead-1.8.3.orig/games/tutorial3/main-ua.lua
++++ instead-1.8.3/games/tutorial3/main-ua.lua
+@@ -12,7 +12,7 @@ game.use = 'Не спрацює...';
+ 
+ game.pic = 'instead.png';
+ 
+-set_music('sv_ttt.xm');
++set_music('blurry_xmas_jam.xm');
+ 
+ main = room {
+ 	nam = 'Навчання',
+@@ -233,7 +233,7 @@ theend = room {
+ 		натисніть мишею на символ меню (справа знизу).^^
+ 		Тепер Ви готові до гри. Хай щастить!!!^^
+ 		Ігри для INSTEAD можно завантажити тут: ]]..txtu("http://instead.syscall.ru")..[[^^
+-		Для навчення використан трек The Titan Turrican от svenzzon.]],
++		Для навчання використан трек XMas Jam вiд BLuRry.]],
+ 	obj = { vway('keys', 'Подивитись {список клавіш}.', 'help')},
+ };
+ 
+--- instead-1.8.3.orig/games/tutorial3/main-ru.lua
++++ instead-1.8.3/games/tutorial3/main-ru.lua
+@@ -12,7 +12,7 @@ game.use = 'Не сработает...';
+ 
+ game.pic = 'instead.png';
+ 
+-set_music('sv_ttt.xm');
++set_music('blurry_xmas_jam.xm');
+ 
+ main = room {
+ 	nam = 'Обучение',
+@@ -233,7 +233,7 @@ theend = room {
+ 		нажмите мышью на символ меню (справа снизу).^^
+ 		Теперь Вы готовы к игре. Удачи!!!^^
+ 		Игры для INSTEAD можно скачать здесь: ]]..txtu("http://instead.syscall.ru")..[[^^
+-		В обучении использован трек The Titan Turrican от svenzzon.]],
++		В обучении использован трек XMas Jam от BLuRry.]],
+ 	obj = { vway('keys', 'Посмотреть {список клавиш}.', 'help')},
+ };
+ 
+--- instead-1.8.3.orig/games/tutorial3/main-en.lua
++++ instead-1.8.3/games/tutorial3/main-en.lua
+@@ -7,7 +7,7 @@ game.use = 'Won\'t work...';
+ 
+ game.pic = 'instead.png';
+ 
+-set_music('sv_ttt.xm');
++set_music('blurry_xmas_jam.xm');
+ 
+ main = room {
+ 	nam = 'Tutorial',
+@@ -205,7 +205,7 @@ theend = room {
+ 	dsc = [[With the help of the menu you can choose a game, save or load the state, or do other things. To open the menu press "Esc" or click the menu icon at the bottom right.^^
+ 		Now you are ready to play. Good luck!!!^^
+ 		Download games for INSTEAD here: ]]..txtu("http://instead.googlecode.com")..[[^^
+-		The tutorial uses the track The Titan Turrican from svenzzon.]],
++		The tutorial uses the track XMas Jam from BLuRry.]],
+ 	obj = { vway('keys', 'See {list of keyboard shortcuts}.', 'help')},
+ };
+ 
+--- instead-1.8.3.orig/games/tutorial3/main-es.lua
++++ instead-1.8.3/games/tutorial3/main-es.lua
+@@ -7,7 +7,7 @@ game.use = 'No pasa nada...';
+ 
+ game.pic = 'instead.png';
+ 
+-set_music('sv_ttt.xm');
++set_music('blurry_xmas_jam.xm');
+ 
+ main = room {
+ 	nam = 'Tutorial',
+@@ -204,7 +204,7 @@ theend = room {
+ 	dsc = [[Mediante el menú flotante, puedes elegir un juego, salvar o cargar un juego, y un par de cosas más. Para abrirlo presiona "Esc" o haz click en el icono de menú abajo a la derecha.^^
+ 		Ahora ya estás listo para jugar. Buena suerte!!!^^
+ 		Descarga nuevos juegos para INSTEAD aquí: ]]..txtu("http://instead.googlecode.com")..[[^^
+-		Este tutorial usa el tema The Titan Turrican de svenzzon.]],
++		Este tutorial usa el tema XMas Jam de BLuRry.]],
+ 	obj = { vway('keys', 'Ver {lista de atajos de teclado}.', 'help')},
+ };
+ 

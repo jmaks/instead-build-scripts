@@ -8,8 +8,9 @@ instead (1.8.3-1) unstable; urgency=low
   * themes/default/sans*.ttf fonts replaced with system ones.
   * Added doc-packages.
   * Threaded make.
+  * Replaced tutorial music for compliance with DFSG.
 
- -- Sam Protsenko <joe.skb7@gmail.com>  Fri, 01 Feb 2013 02:48:00 +0200
+ -- Sam Protsenko <joe.skb7@gmail.com>  Fri, 01 Mar 2013 01:36:00 +0200
 
 instead (1.6.1-1) unstable; urgency=low
 
