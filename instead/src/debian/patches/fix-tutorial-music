@@ -5,7 +5,7 @@ Description: Replace tutorial music for DFSG compliance
  DFSG rules.
 Author: Sam Protsenko <joe.skb7@gmail.com>
 Reviewed-By: Alexander GQ Gerasiov <gq@debian.org>
-Last-Update: <2013-03-01>
+Last-Update: <2013-02-28>
 
 --- instead-1.8.3.orig/games/tutorial3/main-it.lua
 +++ instead-1.8.3/games/tutorial3/main-it.lua
