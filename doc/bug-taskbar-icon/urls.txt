@@ -1,0 +1,21 @@
+SDL patch: use _NET_WM_ICON
+http://lists.libsdl.org/pipermail/commits-libsdl.org/2012-October/005808.html
+
+SDL mailing list thread:
+http://lists.libsdl.org/pipermail/sdl-libsdl.org/2013-February/086890.html
+
+KDE mailing list thread:
+http://lists.kde.org/?t=136041482800002&r=1&w=2
+
+Kubuntu 12.10 64-bit Desktop DVD (check MD5 sum)
+http://www.kubuntu.org/getkubuntu/download#download-block
+
+
+TODO
+~~~~
+
+1. Test instead icon with last KDE (Kubuntu)
+2. Test with last libtaskbar
+2. File the bug
+   libtaskbar is in kdeworkspace, just file it against the plasma taskbar component and let them pass it down.
+3. Add note to both of mailing lists
