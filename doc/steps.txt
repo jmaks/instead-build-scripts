@@ -125,3 +125,6 @@ apt-get update
 см. http://wiki.debian.org/PbuilderTricks#How_to_include_local_packages_in_the_build
 
 --------
+
+
+debian/rules: must be executable
