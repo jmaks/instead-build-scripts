@@ -2,14 +2,14 @@ instead (1.8.3-1) unstable; urgency=low
 
   * New upstream release (Closes: #664587).
   * Removed linking patch as it's not necessary (fixed upstream).
-  * Added copyright for games/tutorial3/sv_ttt.xm.
+  * Removed non-free games/tutorial3/sv_ttt.xm.
   * Added missed copyright for themes/default/sans*.ttf.
   * Added patch fixes desktop entry.
   * themes/default/sans*.ttf fonts replaced with system ones.
   * Added doc-packages.
   * Threaded make.
 
- -- Sam Protsenko <joe.skb7@gmail.com>  Fri, 01 Feb 2013 02:48:00 +0200
+ -- Sam Protsenko <joe.skb7@gmail.com>  Sat, 09 Mar 2013 22:40:00 +0200
 
 instead (1.6.1-1) unstable; urgency=low
 
