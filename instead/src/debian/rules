@@ -17,10 +17,6 @@ DEST_DIR = $(TMP_DIR)/usr
 	dh $@ --parallel
 
 override_dh_auto_configure:
-	# Replacing tutorial music (for compliance with DFSG)
-	rm -f games/tutorial3/sv_ttt.xm
-	cp -f debian/sound/blurry_xmas_jam.xm games/tutorial3
-
 	# Making links for man files
 	ln -s instead.6 doc/sdl-instead.6
 	ln -s instead.txt doc/sdl-instead.txt
