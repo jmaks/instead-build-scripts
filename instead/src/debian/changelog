@@ -1,3 +1,22 @@
+instead (1.9.1-1) unstable; urgency=low
+
+  * New upstream release.
+  * New tutorial soundtrack from svenzzon.
+  * debian/control:
+    - Bumped up Standards-Version to 3.9.4.
+  * debian/compat:
+    - Bumped up to 9.
+  * debian/watch:
+    - Update link to current INSTEAD repository.
+  * debian/copyright:
+    - Update INSTEAD site link.
+    - Update copyright for tutorial music.
+  * debian/control:
+    - Update INSTEAD site link.
+    - Update game repository link.
+
+ -- Sam Protsenko <joe.skb7@gmail.com>  Thu, 05 Sep 2013 02:07:22 +0300
+
 instead (1.8.3-1) unstable; urgency=low
 
   * New upstream release (Closes: #664587).
