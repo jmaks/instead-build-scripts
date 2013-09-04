@@ -1,7 +1,7 @@
 Format: http://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
 Upstream-Name: INSTEAD
 Upstream-Contact: Peter Kosyh <p.kosyh@gmail.com>
-Source: http://instead.googlecode.com
+Source: http://instead.sourceforge.net
 
 Files: *
 Copyright: 2009-2013, Peter Kosyh <p.kosyh@gmail.com>
