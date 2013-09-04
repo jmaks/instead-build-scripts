@@ -157,3 +157,6 @@ http://packages.qa.debian.org/i/instead.html
 Сейчас вроде всё есть.
 
 --------
+
+хороший пример как вести changelog:
+http://ftp-master.metadata.debian.org/changelogs/main/g/google-perftools/unstable_changelog
