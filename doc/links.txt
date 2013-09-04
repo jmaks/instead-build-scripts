@@ -1,1 +1,7 @@
 http://www.opennet.ru/opennews/art.shtml?num=34119
+
+Debian new packages queue:
+http://ftp-master.debian.org/new.html
+
+Tracking of INSTEAD package:
+http://packages.qa.debian.org/i/instead.html
