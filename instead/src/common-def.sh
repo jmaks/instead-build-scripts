@@ -16,8 +16,10 @@ extract_verd() {
 
 # ---- VARIABLES ----
 
+# INSTEAD version, in format x.y.z
 ver=$(extract_ver .)
-verd=$(extract_verd .) # +debian packaging ver
+# +debian packaging ver, like x.y.z-d
+verd=$(extract_verd .)
 instead_dir=instead-$ver
 instead_orig_tar=instead_$ver.orig.tar.gz
 cur_dir=$(pwd)
@@ -31,9 +33,9 @@ instead_${verd}_source.changes \
 instead_${verd}.debian.tar.gz \
 instead_${verd}.dsc \
 instead-data_${verd}_all.deb \
-instead-doc-base_1.8.3-1_all.deb \
-instead-doc-en_1.8.3-1_all.deb \
-instead-doc-ru_1.8.3-1_all.deb"
+instead-doc-base_${verd}_all.deb \
+instead-doc-en_${verd}_all.deb \
+instead-doc-ru_${verd}_all.deb"
 # _source.changes creates only by i386 build process
 
 # ---- FUNCTIONS ----
