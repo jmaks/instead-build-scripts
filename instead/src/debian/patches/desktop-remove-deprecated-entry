@@ -8,13 +8,13 @@ Description: Remove "Encoding" entry in desktop file
  which is harmless but no longer necessary.
 Author: Sam Protsenko <joe.skb7@gmail.com>
 Reviewed-By: Alexander GQ Gerasiov <gq@debian.org>
-Last-Update: <2013-01-29>
+Last-Update: <2013-09-05>
 
---- instead-1.8.3.orig/desktop/instead.desktop.in
-+++ instead-1.8.3/desktop/instead.desktop.in
+--- instead-1.9.1.orig/desktop/instead.desktop.in
++++ instead-1.9.1/desktop/instead.desktop.in
 @@ -1,5 +1,4 @@
  [Desktop Entry]
 -Encoding=UTF-8
- Version=1.8.3
+ Version=1.9.1
  Type=Application
  Name=INSTEAD
