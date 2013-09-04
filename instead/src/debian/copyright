@@ -48,8 +48,8 @@ Files: icon/*.ico icon/*.svg icon/*.png
 Copyright: AJ Ashton
 License: CC0
 
-Files: games/tutorial3/blurry_xmas_jam.xm
-Copyright: 1996, BLuRry
+Files: games/tutorial3/instead.ogg
+Copyright: 2013, svenzzon
 License: CC-BY-SA-3.0
 
 Files: themes/default/sans*.ttf
