@@ -1,10 +1,6 @@
 http://lintian.debian.org/maintainer/joe.skb7@gmail.com.html#instead
 https://buildd.debian.org/~brlink/packages/i/instead.html
 
-- instead теперь на instead.sourceforge.net (сменить в пакете SVN треккинг)
-- гугл запретил хостинг файлов, так что теперь архивы в других местах
-
-
 - статью на хабр (и потом на IFPrint.org)
 
 - залить скриншот на страницЫ с пакетАМИ (http://packages.debian.org/sid/main/instead и т.д.)
