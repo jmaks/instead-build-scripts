@@ -4,7 +4,7 @@ Priority: optional
 Maintainer: Sam Protsenko <joe.skb7@gmail.com>
 Build-Depends: debhelper (>= 8.0.0), dpkg-dev (>= 1.16.1~), pkg-config, liblua5.1-dev, libsdl1.2-dev, libsdl-ttf2.0-dev, libsdl-image1.2-dev, libsdl-mixer1.2-dev, zlib1g-dev, libgtk2.0-dev, fonts-liberation
 Standards-Version: 3.9.4
-Homepage: http://instead.googlecode.com
+Homepage: http://instead.sourceforge.net
 
 Package: instead
 Architecture: any
@@ -21,7 +21,7 @@ Description: Simple text adventures/visual novels engine
    * Theme support
    * Portability (INSTEAD depends on SDL and Lua)
  .
- Game repository: http://code.google.com/p/instead-games/downloads/list
+ Game repository: http://instead-games.sourceforge.net
 
 Package: instead-data
 Architecture: all
