@@ -81,5 +81,3 @@ case "$1" in
         echo "Invalid arguments"
         exit 1
 esac
-
-exit 0
