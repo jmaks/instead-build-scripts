@@ -159,3 +159,8 @@ http://packages.qa.debian.org/i/instead.html
 
 хороший пример как вести changelog:
 http://ftp-master.metadata.debian.org/changelogs/main/g/google-perftools/unstable_changelog
+
+--------
+
+blhc -- проверка hardening флагов
+натравливать на .build файл (логи сборки)
