@@ -4,8 +4,10 @@
 
 # ---- VARIABLES ----
 
-result_dir_i386="$home_dir/pbuilder/testing/result"
-build_dir_i386=../build_i386
+dist=testing
+arch=i386
+result_dir_i386="$home_dir/pbuilder/$dist/result"
+build_dir_i386=../build_$arch
 
 # ---- FUNCTIONS ----
 
@@ -18,7 +20,7 @@ clean_prev_result_i386() {
 build_i386() {
     echo "Start building deb for architecture i386..."
     cd $instead_dir
-    sudo DIST=testing ARCH=i386 pdebuild
+    sudo DIST=$dist ARCH=$arch pdebuild
     res=$?
     cd $cur_dir
     if [ $res -eq 0 ]; then
@@ -46,7 +48,7 @@ move_result_i386() {
 
 sign_i386() {
     echo "Signing of changes file... "
-    debsign $build_dir_i386/instead_${verd}_i386.changes
+    debsign $build_dir_i386/instead_${verd}_$arch.changes
     echo "Signing [OK]"
 }
 
