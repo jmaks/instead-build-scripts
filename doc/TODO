@@ -1,9 +1,20 @@
 http://lintian.debian.org/maintainer/joe.skb7@gmail.com.html#instead
 https://buildd.debian.org/~brlink/packages/i/instead.html
 
+- убрать HACK из debian/rules как только Пётр починит в апстриме
+- в апстриме должны учитываться флаги hardening (см. вывод blhc);
+  если нет -- сделать debian-патч
+- как только в апстриме уйдёт устаревший "Encoding=UTF8" из desktop-файла -- убрать
+  мой патч
+- починить ошибки вида:
+  dpkg-shlibdeps: warning: package could avoid a useless dependency if
+  debian/instead/usr/games/sdl-instead was not linked against
+  libfontconfig.so.1 (it uses none of the library's symbols)
+  (наверное Пётр не захочет чинить это в апстриме, так что починить у себя)
+
 - статью на хабр (и потом на IFPrint.org)
 
-- залить скриншот на страницЫ с пакетАМИ (http://packages.debian.org/sid/main/instead и т.д.)
+- залить скриншот на страницы с пакетами (http://packages.debian.org/sid/main/instead и т.д.)
 - сделать для каждого пакета описание и краткое описание на русском и англ.
   (уточнить у Alexander GQ)
 - сделать пакет для "Кубы"
@@ -12,6 +23,5 @@ https://buildd.debian.org/~brlink/packages/i/instead.html
 
 - Петр: документацию разбить на рус. и англ. (без совместных html)
 - мои скрипты: проверку на зависимости (devscripts, debhelper и т.д.) где нужно
-- перейти на debhelper 9
 - скрипт заливки: пофиксить обработку результата для FTP
 - иконка "X" в таскбаре
