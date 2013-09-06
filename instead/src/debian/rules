@@ -4,7 +4,7 @@
 DPKG_EXPORT_BUILDFLAGS = 1
 include /usr/share/dpkg/buildflags.mk
 
-# HACK: remove once upstream is being patched properly
+# HACK: remove this once upstream is being patched properly
 LDFLAGS += -lm
 
 # Multithreaded make
