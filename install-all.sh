@@ -71,5 +71,3 @@ case "$1" in
         install_all
         ;;
 esac
-
-exit 0

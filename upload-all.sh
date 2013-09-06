@@ -85,5 +85,3 @@ for f in $changes_list; do
 
     cd "$cur_dir"
 done
-
-exit 0
