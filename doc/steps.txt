@@ -97,6 +97,31 @@ dpkg-source: инфо: обнаружены локальные изменени�
  instead-1.8.2/desktop/instead.desktop.in
 Введите желаемое имя заплаты:
 
+4. привести редактируемое сообщение патча к виду:
+
+-------------------------- cut here ---------------------------------
+Description: Remove "Encoding" entry in desktop file
+ Regarding Lintian rule "desktop-entry-contains-encoding-key":
+ .
+ The Encoding key is now deprecated by the FreeDesktop standard
+ and all strings are required to be encoded in UTF-8.
+ .
+ This desktop entry explicitly specifies an Encoding of UTF-8,
+ which is harmless but no longer necessary.
+Author: Sam Protsenko <joe.skb7@gmail.com>
+Reviewed-By: Alexander GQ Gerasiov <gq@debian.org>
+Last-Update: <2013-09-05>
+
+--- instead-1.9.1.orig/desktop/instead.desktop.in
++++ instead-1.9.1/desktop/instead.desktop.in
+@@ -1,5 +1,4 @@
+ [Desktop Entry]
+-Encoding=UTF-8
+ Version=1.9.1
+ Type=Application
+ Name=INSTEAD
+-------------------------- cut here ---------------------------------
+
 
 --------
 
@@ -164,3 +189,7 @@ http://ftp-master.metadata.debian.org/changelogs/main/g/google-perftools/unstabl
 
 blhc -- проверка hardening флагов
 натравливать на .build файл (логи сборки)
+
+--------
+
+desktop-файлы: проверять тулзой desktop-file-validate
