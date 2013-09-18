@@ -1,0 +1,38 @@
+Description: Make desktop file compliant to standards
+ 1. "Encoding" entry is deprecated, so remove it.
+    Lintian also ask us to do so. For details see:
+    "desktop-entry-contains-encoding-key".
+ 2. "Icon" must not contain file extension, fix it.
+    It was found using "desktop-file-validate" tool.
+ 3. "Version" entry must be desktop-file standard version,
+    not the application version. It was found using
+    "desktop-file-validate" tool.
+ 4. Add "Keywords" entries so that convenient searching can be done
+    by user. Lintian also wants it. For details see:
+    "desktop-entry-lacks-keywords-entry".
+Author: Sam Protsenko <joe.skb7@gmail.com>
+Reviewed-By: Peter Kosyh <p.kosyh@gmail.com>
+Last-Update: <2013-09-18>
+
+--- instead-1.9.1.orig/desktop/instead.desktop.in
++++ instead-1.9.1/desktop/instead.desktop.in
+@@ -1,6 +1,5 @@
+ [Desktop Entry]
+-Encoding=UTF-8
+-Version=1.9.1
++Version=1.0
+ Type=Application
+ Name=INSTEAD
+ Name[ru]=INSTEAD
+@@ -8,7 +7,10 @@ Name[uk]=INSTEAD
+ Comment=Simple Text Adventures Interpreter
+ Comment[ru]=Интерпретатор простых приключений
+ Comment[uk]=Iнтерпретатор простих пригод
++Keywords=game;adventure;quest;
++Keywords[ru]=игра;приключения;квест;
++Keywords[uk]=гра;пригоди;квест;
+ Exec=@BIN/sdl-instead
+-Icon=sdl_instead.png
++Icon=sdl_instead
+ Terminal=false
+ Categories=Game;LogicGame;
