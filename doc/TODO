@@ -1,11 +1,12 @@
 http://lintian.debian.org/maintainer/joe.skb7@gmail.com.html#instead
 https://buildd.debian.org/~brlink/packages/i/instead.html
 
+- пофиксить ворнинги для .desktop-файла (см. ворнинг линтиана и вывод desktop-file-validate)
+- как только в апстриме починят desktop-файл -- убрать мой патч
 - убрать HACK из debian/rules как только Пётр починит в апстриме
 - в апстриме должны учитываться флаги hardening (см. вывод blhc);
   если нет -- сделать debian-патч
-- как только в апстриме уйдёт устаревший "Encoding=UTF8" из desktop-файла -- убрать
-  мой патч
+
 - починить ошибки вида:
   dpkg-shlibdeps: warning: package could avoid a useless dependency if
   debian/instead/usr/games/sdl-instead was not linked against
