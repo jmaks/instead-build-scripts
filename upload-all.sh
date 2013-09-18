@@ -73,13 +73,16 @@ for f in $changes_list; do
         # Uploading
         echo "*** Uploading $b..."
         dput -f $sel_config $(basename $f)
-        res=$?
-        if [ $res ]; then
-            status="[FAILED]"
-        else
-            status="[OK]"
+
+        if [ $action != "FTP" ]; then
+            res=$?
+            if [ $res ]; then
+                status="[FAILED]"
+            else
+                status="[OK]"
+            fi
+            echo "Uploading $b: $status"
         fi
-        echo "Uploading $b: $status"
     fi
     echo
 
