@@ -16,8 +16,16 @@ instead (1.9.1-1) unstable; urgency=low
   * debian/control:
     - Update INSTEAD site link.
     - Update game repository link.
+  * patches/:
+    - Fix Lintian warnings:
+      - "desktop-entry-contains-encoding-key"
+      - "desktop-entry-lacks-keywords-entry"
+    - Fix "desktop-file-validate" tool warnings:
+      - "Icon" must not contain file extension
+      - "Version" entry must be desktop-file standard version,
+        not the application version
 
- -- Sam Protsenko <joe.skb7@gmail.com>  Thu, 05 Sep 2013 02:07:22 +0300
+ -- Sam Protsenko <joe.skb7@gmail.com>  Wed, 18 Sep 2013 16:02:00 +0300
 
 instead (1.8.3-1) unstable; urgency=low
 
