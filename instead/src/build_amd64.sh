@@ -17,7 +17,7 @@ build() {
     if [ $res -eq 0 ]; then
         echo "Building deb [OK]"
     else
-        echo "Building deb [FAILED]"
+        echo "Building deb [FAILED]" >&2
         exit 1
     fi
 }
@@ -36,7 +36,7 @@ move() {
             continue
         fi
         if [ ! -f "$f" ]; then
-            echo "Can't move file: file doesn't exist: $f [FAILED]"
+            echo "Can't move file: file doesn't exist: $f [FAILED]" >&2
             exit 1
         fi
         mv $f "$build_dir_amd64"
@@ -47,7 +47,7 @@ move() {
 
 test_if_run_from_build_sh() {
     if [ -z "$RUN_FROM_BUILD_SH" ]; then
-        echo "Please use build.sh script instead of running this one"
+        echo "Please use build.sh script instead of running this one" >&2
         exit 1
     fi
 }
@@ -78,6 +78,6 @@ case "$1" in
         clean
         ;;
     *)
-        echo "Invalid arguments"
+        echo "Invalid arguments" >&2
         exit 1
 esac

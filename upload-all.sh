@@ -44,7 +44,7 @@ case "$1" in
         echo "*** Selected: removing my files on mentors.debian.org"
         ;;
     *)
-        echo "Specified invalid method"
+        echo "Specified invalid method" >&2
         print_usage
         exit 1
 esac

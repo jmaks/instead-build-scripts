@@ -62,7 +62,7 @@ build() {
     if [ $res -eq 0 ]; then
         echo "Building deb [OK]"
     else
-        echo "Building deb [FAILED]"
+        echo "Building deb [FAILED]" >&2
         exit 1
     fi
 }
@@ -102,6 +102,6 @@ case "$1" in
         clean
         ;;
     *)
-        echo "Invalid arguments"
+        echo "Invalid arguments" >&2
         exit 1
 esac

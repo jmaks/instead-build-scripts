@@ -54,7 +54,7 @@ case "$1" in
         exit 0
         ;;
     *)
-        echo "Invalid arguments"
+        echo "Invalid arguments" >&2
         print_usage
         exit 1
 esac

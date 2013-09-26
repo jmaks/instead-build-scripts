@@ -65,7 +65,7 @@ case "$1" in
         exit 0
         ;;
     *)
-        echo "Invalid argument specified"
+        echo "Invalid argument specified" >&2
         print_usage
         exit 1
         ;;
