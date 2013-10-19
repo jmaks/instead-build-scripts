@@ -6,8 +6,6 @@ instead (1.9.1-1) unstable; urgency=low
   * Fix build on sid on amd64 (Closes: #713680).
   * debian/control:
     - Bumped up Standards-Version to 3.9.4.
-  * debian/compat:
-    - Bumped up to 9.
   * debian/watch:
     - Update link to current INSTEAD repository.
   * debian/copyright:
